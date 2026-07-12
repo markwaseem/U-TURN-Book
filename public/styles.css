@@ -513,6 +513,142 @@ footer a {
   color: var(--foreground);
 }
 
+/* Maslow pyramid – psychological section */
+.maslow-block {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.maslow-intro {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.maslow-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0 0 0.65rem;
+  color: var(--foreground);
+}
+
+.maslow-desc {
+  margin: 0;
+  color: var(--muted-foreground);
+  line-height: 1.75;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.maslow-pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.maslow-tier {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.65rem;
+  color: #fff;
+  text-align: right;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease;
+}
+
+.maslow-tier:hover {
+  transform: scale(1.02);
+}
+
+.maslow-tier--1 {
+  max-width: 100%;
+  background: linear-gradient(135deg, #2d6a4f, #40916c);
+}
+
+.maslow-tier--2 {
+  max-width: 92%;
+  background: linear-gradient(135deg, #357a5e, #52b788);
+}
+
+.maslow-tier--3 {
+  max-width: 84%;
+  background: linear-gradient(135deg, #3d9973, #74c69d);
+}
+
+.maslow-tier--4 {
+  max-width: 76%;
+  background: linear-gradient(135deg, #4aad86, #95d5b2);
+  color: #1a3d2e;
+}
+
+.maslow-tier--5 {
+  max-width: 68%;
+  background: linear-gradient(135deg, #b8860b, var(--primary));
+  color: #fff;
+}
+
+.maslow-tier-num {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.maslow-tier--4 .maslow-tier-num {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.maslow-tier-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.maslow-tier-text strong {
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.maslow-tier-text small {
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.45;
+  opacity: 0.92;
+}
+
+.maslow-tier--4 .maslow-tier-text small {
+  opacity: 0.75;
+}
+
+.maslow-note {
+  margin: 0;
+  padding: 1rem 1.15rem;
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--section-accent, var(--secondary)) 8%, var(--background));
+  border: 1px solid color-mix(in srgb, var(--section-accent, var(--secondary)) 20%, var(--border));
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.75;
+  color: var(--foreground);
+}
+
 .section-controls {
   width: 100%;
   display: flex;
@@ -861,5 +997,11 @@ footer a {
   }
   .section-title {
     font-size: 2.25rem;
+  }
+  .maslow-title {
+    font-size: 1.5rem;
+  }
+  .maslow-tier-text strong {
+    font-size: 1rem;
   }
 }
