@@ -1,4 +1,90 @@
+function extractYouTubeVideoId(url) {
+  try {
+    const parsed = new URL(url);
+    const host = parsed.hostname.replace(/^www\./, '');
+
+    if (host === 'youtu.be') {
+      return parsed.pathname.slice(1).split('/')[0] || null;
+    }
+
+    if (host === 'youtube.com' || host === 'm.youtube.com') {
+      if (parsed.pathname === '/watch') {
+        return parsed.searchParams.get('v');
+      }
+      if (parsed.pathname.startsWith('/embed/')) {
+        return parsed.pathname.split('/')[2] || null;
+      }
+      if (parsed.pathname.startsWith('/shorts/')) {
+        return parsed.pathname.split('/')[2] || null;
+      }
+    }
+  } catch {
+    return null;
+  }
+
+  return null;
+}
+
+function isYouTubeUrl(url) {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, '');
+    return host === 'youtu.be' || host === 'youtube.com' || host === 'm.youtube.com';
+  } catch {
+    return false;
+  }
+}
+
+function setYouTubeThumbnail(img, videoId) {
+  const hq = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  const max = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+  img.onerror = () => {
+    img.onerror = null;
+    img.src = hq;
+  };
+  img.src = max;
+}
+
+async function fetchYouTubeOEmbedThumbnail(url, img) {
+  try {
+    const response = await fetch(
+      `https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`
+    );
+    if (!response.ok) return;
+
+    const data = await response.json();
+    if (data.thumbnail_url) {
+      img.src = data.thumbnail_url;
+    }
+  } catch {
+    // Keep placeholder when oEmbed is unavailable.
+  }
+}
+
+function applyYouTubeThumbnails() {
+  document.querySelectorAll('.resource-card').forEach((card) => {
+    const link = card.querySelector('.resource-link[href]');
+    const img = card.querySelector('.resource-thumb img');
+    if (!link || !img) return;
+
+    const href = link.getAttribute('href');
+    if (!href || href === '#' || !isYouTubeUrl(href)) return;
+
+    const videoId = extractYouTubeVideoId(href);
+    if (videoId) {
+      setYouTubeThumbnail(img, videoId);
+      return;
+    }
+
+    if (href.includes('list=')) {
+      fetchYouTubeOEmbedThumbnail(href, img);
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  applyYouTubeThumbnails();
+
   const resources = document.querySelector('.resources');
   if (!resources) return;
 
