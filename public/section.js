@@ -1,3 +1,47 @@
+const FILTER_LABELS = {
+  all: 'الكل',
+  video: 'فيديو',
+  article: 'مقال',
+  pdf: 'PDF',
+};
+
+function toArabicNumerals(value) {
+  return String(value).replace(/\d/g, (digit) => '٠١٢٣٤٥٦٧٨٩'[digit]);
+}
+
+function formatResourceTotal(count) {
+  const word = count === 1 ? 'مورد' : 'موارد';
+  return `${toArabicNumerals(count)} ${word}`;
+}
+
+function countResourcesByType(cards) {
+  const counts = { all: 0, video: 0, article: 0, pdf: 0 };
+
+  cards.forEach((card) => {
+    counts.all += 1;
+    const type = card.dataset.type || 'article';
+    if (type in counts) counts[type] += 1;
+  });
+
+  return counts;
+}
+
+function updateResourceCounts(cards, countEl, filterTabs) {
+  const counts = countResourcesByType(cards);
+
+  if (countEl) {
+    countEl.textContent = formatResourceTotal(counts.all);
+  }
+
+  filterTabs.forEach((tab) => {
+    const filter = tab.dataset.filter || 'all';
+    const label = tab.dataset.filterLabel || FILTER_LABELS[filter] || filter;
+    tab.textContent = `${label} (${toArabicNumerals(counts[filter] ?? counts.all)})`;
+  });
+
+  return counts;
+}
+
 function extractYouTubeVideoId(url) {
   try {
     const parsed = new URL(url);
@@ -90,9 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const cards = [...resources.querySelectorAll('.resource-card')];
   const countEl = document.querySelector('.resources-count');
-  const searchInput = document.querySelector('.resources-search input');
   const filterTabs = document.querySelectorAll('.filter-tab');
   const emptyState = document.querySelector('.resources-empty');
+  updateResourceCounts(cards, countEl, filterTabs);
 
   let activeFilter = 'all';
   let searchQuery = '';
@@ -121,10 +165,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (countEl) {
       countEl.textContent = visibleCount === cards.length
-        ? `${cards.length} موارد`
-        : `${visibleCount} من ${cards.length} مورد`;
+        ? formatResourceTotal(cards.length)
+        : `${toArabicNumerals(visibleCount)} من ${toArabicNumerals(cards.length)} مورد`;
     }
   }
+
+  const searchInput = document.querySelector('.resources-search input');
 
   filterTabs.forEach((tab) => {
     tab.addEventListener('click', () => {

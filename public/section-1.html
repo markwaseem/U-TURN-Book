@@ -73,7 +73,7 @@
     </section>
 
     <div class="resources-toolbar">
-      <span class="resources-count">١١ مورد</span>
+      <span class="resources-count"></span>
       <span class="resources-hint">اضغط على أي مورد للفتح في تبويب جديد</span>
     </div>
 
@@ -82,10 +82,10 @@
         <input type="search" placeholder="ابحث في الموارد..." aria-label="بحث في الموارد">
       </div>
       <div class="filter-tabs" role="tablist" aria-label="تصفية الموارد">
-        <button type="button" class="filter-tab is-active" data-filter="all">الكل</button>
-        <button type="button" class="filter-tab" data-filter="video">فيديو</button>
-        <button type="button" class="filter-tab" data-filter="article">مقال</button>
-        <button type="button" class="filter-tab" data-filter="pdf">PDF</button>
+        <button type="button" class="filter-tab is-active" data-filter="all" data-filter-label="الكل">الكل</button>
+        <button type="button" class="filter-tab" data-filter="video" data-filter-label="فيديو">فيديو</button>
+        <button type="button" class="filter-tab" data-filter="article" data-filter-label="مقال">مقال</button>
+        <button type="button" class="filter-tab" data-filter="pdf" data-filter-label="PDF">PDF</button>
       </div>
     </div>
 
@@ -117,89 +117,59 @@
         <a href="https://www.youtube.com/watch?v=7K6_C7g8g7g" target="_blank" rel="noreferrer" class="resource-link">افتح الفيديو <span class="link-arrow">↗</span></a>
       </div>
 
-      <div class="resource-card" data-type="article" data-search="تمرين اكتشاف الدوافع">
-        <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال</span></div>
-        <div class="resource-body">
-          <h3>تمرين اكتشاف الدوافع</h3>
-          <p>ورقة عمل هتساعدك تفهم إيه اللي بيحفزك للوقوع كل مرة.</p>
-        </div>
-        <a href="https://www.smartrecovery.org/smart-recovery-toolbox/" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
-      </div>
-
-      <div class="resource-card" data-type="article" data-search="قصة واحد زيك rebooting">
-        <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال</span></div>
-        <div class="resource-body">
-          <h3>قصة واحد زيك</h3>
-          <p>شهادة حقيقية لشاب قدر ياخد يو ترن ويرجع لحياته الطبيعية.</p>
-        </div>
-        <a href="https://www.yourbrainonporn.com/rebooting-accounts/" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
-      </div>
-
-      <div class="resource-card" data-type="article" data-search="Urge Surfing Alan Marlatt">
-        <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال (صفحة 19)</span></div>
-        <div class="resource-body">
-          <h3>Urge Surfing: History and Clinical Application</h3>
-          <p>شرح لنموذج د. آلان مارلات للوقاية من الانتكاسة، وإزاي تركب موجة الرغبة لحد ما تختفي من غير ما تستسلم ليها.</p>
-        </div>
-        <a href="https://www.mindfulnessblueprint.com/urge-surfing" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
-      </div>
-
-      <div class="resource-card" data-type="pdf" data-search="Defusion ACT Ross Harris">
-        <div class="resource-tag"><div class="icon">🛠️</div><span class="label">أداة PDF (صفحة 23)</span></div>
-        <div class="resource-body">
-          <h3>Defusion: How to Detangle from Thoughts & Feelings</h3>
-          <p>استراتيجية مأخوذة من العلاج بالقبول والالتزام (ACT) للدكتور روس هاريس لمساعدتك على فك التشابك مع الأفكار الملحّة.</p>
-        </div>
-        <a href="https://www.actmindfully.com.au/wp-content/uploads/2017/12/the_happiness_trap_-reissue_-_free_resources.pdf" target="_blank" rel="noreferrer" class="resource-link">افتح الأداة <span class="link-arrow">↗</span></a>
-      </div>
-
-      <div class="resource-card" data-type="article" data-search="Shame Guilt Brené Brown">
-        <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال رسمي (صفحة 40)</span></div>
-        <div class="resource-body">
-          <h3>Shame vs. Guilt - Brené Brown</h3>
-          <p>فهم الفرق الجوهري بين الشعور بالذنب (اللي بيدفعك للإصلاح) والشعور بالخزي (اللي بيحسسك إنك فاشل كلك على بعضك ويخليك تنتكس).</p>
-        </div>
-        <a href="https://brenebrown.com/articles/2013/01/15/shame-v-guilt/" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
-      </div>
-
-      <div class="resource-card" data-type="article" data-search="Thought-Action Fusion">
-        <div class="resource-tag"><div class="icon">🧠</div><span class="label">مراجعة علمية (صفحة 23)</span></div>
-        <div class="resource-body">
-          <h3>Thought-Action Fusion: Review of the Literature</h3>
-          <p>نظرة أكاديمية وفهم الأفكار الاقتحامية، وإزاي تفرق بين فكرة بتيجي في دماغك وبين إنك تعملها فعلاً.</p>
-        </div>
-        <a href="https://www.sciencedirect.com/topics/psychology/thought-action-fusion" target="_blank" rel="noreferrer" class="resource-link">اقرأ المراجعة <span class="link-arrow">↗</span></a>
-      </div>
-
-      <!-- Spare cards – edit later -->
-      <div class="resource-card resource-card--soon" data-type="video" data-search="فيديو قريبًا coming soon">
+      <div class="resource-card" data-type="video" data-search="جذور الادمان playlist أبيض">
         <div class="resource-thumb">
           <img src="/images/video-placeholder.png" alt="جذور الادمان">
+          <div class="play-overlay"><span>▶</span></div>
         </div>
         <div class="resource-tag"><div class="icon">🎬</div><span class="label">جذور الإدمان</span></div>
         <div class="resource-body">
+          <h3>جذور الإدمان – playlist أبيض</h3>
           <p>ايه هي جذور الادمان بشكل مفصل من خلال playlist أبيض</p>
         </div>
         <a href="https://www.youtube.com/playlist?list=PLMYjM5SuB9dtZyX1uhSOHVzLrJYM8UVYr" target="_blank" rel="noreferrer" class="resource-link">شاهد الفيديو <span class="link-arrow">↗</span></a>
       </div>
 
-      <div class="resource-card resource-card--soon" data-type="article" data-search="مقال قريبًا coming soon">
-        <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال · قريبًا</span></div>
-        <div class="resource-body">
-          <h3>مقال جديد <span class="soon-label">Coming Soon</span></h3>
-          <p>مكان محجوز لمقال – عدّل العنوان، الوصف، وضع الرابط هنا.</p>
+      <!--
+      ═══ SPARE CARD – فيديو ═══
+      انسخ الكود ده وشيل علامات التعليق لما تضيف فيديو جديد.
+      <div class="resource-card" data-type="video" data-search="عنوان الفيديو">
+        <div class="resource-thumb">
+          <img src="/images/video-placeholder.png" alt="عنوان الفيديو">
+          <div class="play-overlay"><span>▶</span></div>
         </div>
-        <span class="resource-link resource-link--soon">قريبًا · Coming Soon</span>
+        <div class="resource-tag"><div class="icon">🎬</div><span class="label">فيديو</span></div>
+        <div class="resource-body">
+          <h3>عنوان الفيديو</h3>
+          <p>وصف قصير للفيديو.</p>
+        </div>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" rel="noreferrer" class="resource-link">افتح الفيديو <span class="link-arrow">↗</span></a>
       </div>
+      -->
 
-      <div class="resource-card resource-card--soon" data-type="pdf" data-search="pdf قريبًا coming soon">
-        <div class="resource-tag"><div class="icon">📕</div><span class="label">PDF · قريبًا</span></div>
+      <!--
+      ═══ SPARE CARD – مقال ═══
+      <div class="resource-card" data-type="article" data-search="عنوان المقال">
+        <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال</span></div>
         <div class="resource-body">
-          <h3>ملف PDF جديد <span class="soon-label">Coming Soon</span></h3>
-          <p>مكان محجوز لملف PDF – عدّل العنوان، الوصف، وضع رابط Google Drive هنا.</p>
+          <h3>عنوان المقال</h3>
+          <p>وصف قصير للمقال.</p>
         </div>
-        <span class="resource-link resource-link--soon">قريبًا · Coming Soon</span>
+        <a href="https://example.com" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
       </div>
+      -->
+
+      <!--
+      ═══ SPARE CARD – PDF ═══
+      <div class="resource-card" data-type="pdf" data-search="عنوان PDF">
+        <div class="resource-tag"><div class="icon">📕</div><span class="label">PDF</span></div>
+        <div class="resource-body">
+          <h3>عنوان PDF</h3>
+          <p>وصف قصير للملف.</p>
+        </div>
+        <a href="https://drive.google.com/file/d/FILE_ID/view" target="_blank" rel="noreferrer" class="resource-link">افتح الملف <span class="link-arrow">↗</span></a>
+      </div>
+      -->
 
     </div>
 

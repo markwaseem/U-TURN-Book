@@ -26,7 +26,7 @@
     </header>
 
     <div class="resources-toolbar">
-      <span class="resources-count">٨ موارد</span>
+      <span class="resources-count"></span>
       <span class="resources-hint">اضغط على أي مورد للفتح في تبويب جديد</span>
     </div>
 
@@ -35,10 +35,10 @@
         <input type="search" placeholder="ابحث في الموارد..." aria-label="بحث في الموارد">
       </div>
       <div class="filter-tabs" role="tablist" aria-label="تصفية الموارد">
-        <button type="button" class="filter-tab is-active" data-filter="all">الكل</button>
-        <button type="button" class="filter-tab" data-filter="video">فيديو</button>
-        <button type="button" class="filter-tab" data-filter="article">مقال</button>
-        <button type="button" class="filter-tab" data-filter="pdf">PDF</button>
+        <button type="button" class="filter-tab is-active" data-filter="all" data-filter-label="الكل">الكل</button>
+        <button type="button" class="filter-tab" data-filter="video" data-filter-label="فيديو">فيديو</button>
+        <button type="button" class="filter-tab" data-filter="article" data-filter-label="مقال">مقال</button>
+        <button type="button" class="filter-tab" data-filter="pdf" data-filter-label="PDF">PDF</button>
       </div>
     </div>
 
@@ -101,37 +101,46 @@
         <a href="https://drive.google.com/file/d/1o4ldjwkQ1LwdxAi7Rzf-xnBe_5r9r6wW/view" target="_blank" rel="noreferrer" class="resource-link">افتح الكتاب <span class="link-arrow">↗</span></a>
       </div>
 
-      <!-- Spare cards – edit later -->
-      <div class="resource-card resource-card--soon" data-type="video" data-search="فيديو عظة قريبًا coming soon">
+      <!--
+      ═══ SPARE CARD – فيديو ═══
+      انسخ الكود ده وشيل علامات التعليق لما تضيف فيديو جديد.
+      <div class="resource-card" data-type="video" data-search="عنوان الفيديو">
         <div class="resource-thumb">
-          <img src="/images/video-placeholder.png" alt="فيديو – قريبًا">
-          <div class="play-overlay play-overlay--soon"><span>⏳</span></div>
+          <img src="/images/video-placeholder.png" alt="عنوان الفيديو">
+          <div class="play-overlay"><span>▶</span></div>
         </div>
-        <div class="resource-tag"><div class="icon">🎬</div><span class="label">عظة · قريبًا</span></div>
+        <div class="resource-tag"><div class="icon">🎬</div><span class="label">عظة – فيديو</span></div>
         <div class="resource-body">
-          <h3>عظة / فيديو جديد <span class="soon-label">Coming Soon</span></h3>
-          <p>مكان محجوز لعظة أو فيديو روحي – عدّل العنوان، الوصف، وضع رابط YouTube هنا.</p>
+          <h3>عنوان الفيديو</h3>
+          <p>وصف قصير للفيديو.</p>
         </div>
-        <span class="resource-link resource-link--soon">قريبًا · Coming Soon</span>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" rel="noreferrer" class="resource-link">افتح الفيديو <span class="link-arrow">↗</span></a>
       </div>
+      -->
 
-      <div class="resource-card resource-card--soon" data-type="article" data-search="مقال روحي قريبًا coming soon">
-        <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال · قريبًا</span></div>
+      <!--
+      ═══ SPARE CARD – مقال ═══
+      <div class="resource-card" data-type="article" data-search="عنوان المقال">
+        <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال</span></div>
         <div class="resource-body">
-          <h3>مقال روحي جديد <span class="soon-label">Coming Soon</span></h3>
-          <p>مكان محجوز لمقال روحي – عدّل العنوان، الوصف، وضع الرابط هنا.</p>
+          <h3>عنوان المقال</h3>
+          <p>وصف قصير للمقال.</p>
         </div>
-        <span class="resource-link resource-link--soon">قريبًا · Coming Soon</span>
+        <a href="https://example.com" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
       </div>
+      -->
 
-      <div class="resource-card resource-card--soon" data-type="pdf" data-search="كتاب pdf قريبًا coming soon">
-        <div class="resource-tag"><div class="icon">📕</div><span class="label">كتاب · قريبًا</span></div>
+      <!--
+      ═══ SPARE CARD – PDF ═══
+      <div class="resource-card" data-type="pdf" data-search="عنوان PDF">
+        <div class="resource-tag"><div class="icon">📕</div><span class="label">كتاب – PDF</span></div>
         <div class="resource-body">
-          <h3>كتاب روحي – PDF جديد <span class="soon-label">Coming Soon</span></h3>
-          <p>مكان محجوز لكتاب PDF – عدّل العنوان، الوصف، وضع رابط Google Drive هنا.</p>
+          <h3>عنوان PDF</h3>
+          <p>وصف قصير للملف.</p>
         </div>
-        <span class="resource-link resource-link--soon">قريبًا · Coming Soon</span>
+        <a href="https://drive.google.com/file/d/FILE_ID/view" target="_blank" rel="noreferrer" class="resource-link">افتح الكتاب <span class="link-arrow">↗</span></a>
       </div>
+      -->
 
     </div>
 
