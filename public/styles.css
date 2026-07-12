@@ -172,6 +172,132 @@ h1.title {
   opacity: 0.92;
 }
 
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 3rem;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid color-mix(in srgb, var(--secondary) 35%, var(--border));
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--secondary);
+  background: color-mix(in srgb, var(--secondary) 6%, var(--card));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.journey-path {
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1.75rem 1.5rem;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.journey-path-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0 0 0.4rem;
+}
+
+.journey-path-subtitle {
+  margin: 0 0 1.75rem;
+  color: var(--muted-foreground);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 1.5rem;
+}
+
+.journey-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: right;
+  padding: 0.85rem 0;
+}
+
+.journey-step-marker {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.journey-step-num {
+  width: 1.65rem;
+  height: 1.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.journey-step-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.journey-step-body {
+  flex: 1;
+  min-width: 0;
+  padding-top: 0.1rem;
+}
+
+.journey-step-body strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.journey-step-body p {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.journey-connector {
+  display: block;
+  width: 2px;
+  height: 1.25rem;
+  margin-right: 0.8rem;
+  background: linear-gradient(to bottom, var(--secondary), color-mix(in srgb, var(--primary) 70%, var(--secondary)));
+  border-radius: 999px;
+  opacity: 0.45;
+}
+
 .nav-cards-section {
   width: 100%;
   margin-top: 4rem;
@@ -991,7 +1117,37 @@ footer a {
   .hero { height: 70vh; }
   h1.title { font-size: 3rem; }
   .btn-primary { width: auto; }
+  .btn-secondary { width: auto; }
   .nav-cards-title { font-size: 1.75rem; }
+  .journey-path-title { font-size: 1.5rem; }
+
+  .journey-steps {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .journey-step {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .journey-step-body {
+    padding-top: 0.5rem;
+  }
+
+  .journey-connector {
+    width: 2.5rem;
+    height: 2px;
+    margin: 1.5rem 0 0;
+    align-self: flex-start;
+    background: linear-gradient(to left, var(--secondary), color-mix(in srgb, var(--primary) 70%, var(--secondary)));
+  }
+
   .section-pager {
     grid-template-columns: 1fr 1fr;
   }
