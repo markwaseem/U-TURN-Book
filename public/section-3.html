@@ -3,23 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الجزء التالت – الاستمرار | يوتيرن</title>
+<title>القسم العلاجي | يوتيرن</title>
+<meta name="description" content="إزاي تلف وترجع تاني للطريق الصح – موارد علاجية من كتاب يوتيرن.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
+<body class="section-page section-therapeutic">
 
   <main class="section-main">
     <div class="section-topbar">
-      <a href="/index.html" class="back-link">→ رجوع للرئيسية</a>
+      <a href="/" class="back-link">→ رجوع للرئيسية</a>
       <img src="/images/logo.png" alt="UTURN Logo">
     </div>
 
-    <h1 class="section-title">الجزء التالت – الاستمرار</h1>
+    <header class="section-hero">
+      <span class="section-badge">الجزء التالت</span>
+      <h1 class="section-title">القسم العلاجي</h1>
+      <p class="section-intro">إزاي تلف وترجع تاني للطريق الصح – أدوات عملية للاستمرار، بناء عادات جديدة، والوقوف تاني بعد أي سقطة.</p>
+      <div class="section-quote">
+        <p>"السقطة مش نهاية الطريق – هي فرصة تبدأ من جديد وأقوى."</p>
+      </div>
+    </header>
+
+    <div class="resources-toolbar">
+      <span class="resources-count">٤ موارد</span>
+      <span class="resources-hint">اضغط على أي مورد للفتح في تبويب جديد</span>
+    </div>
+
+    <div class="section-controls">
+      <div class="resources-search">
+        <input type="search" placeholder="ابحث في الموارد..." aria-label="بحث في الموارد">
+      </div>
+      <div class="filter-tabs" role="tablist" aria-label="تصفية الموارد">
+        <button type="button" class="filter-tab is-active" data-filter="all">الكل</button>
+        <button type="button" class="filter-tab" data-filter="video">فيديو</button>
+        <button type="button" class="filter-tab" data-filter="article">مقال</button>
+      </div>
+    </div>
 
     <div class="resources">
 
-      <div class="resource-card">
+      <div class="resource-card" data-type="video" data-search="بناء عادات جديدة">
         <div class="resource-thumb">
           <img src="/images/video-placeholder.png" alt="بناء عادات جديدة">
           <div class="play-overlay"><span>▶</span></div>
@@ -29,28 +53,28 @@
           <h3>بناء عادات جديدة</h3>
           <p>الفراغ هو أكبر عدو. إزاي تملى وقتك بحاجات تبني حياتك.</p>
         </div>
-        <a href="https://youtube.com" target="_blank" rel="noreferrer" class="resource-link">افتح الفيديو</a>
+        <a href="https://youtube.com" target="_blank" rel="noreferrer" class="resource-link">افتح الفيديو <span class="link-arrow">↗</span></a>
       </div>
 
-      <div class="resource-card">
+      <div class="resource-card" data-type="article" data-search="خطة 90 يوم">
         <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال</span></div>
         <div class="resource-body">
           <h3>خطة الـ 90 يوم</h3>
           <p>جدول يساعدك تتابع تقدمك وتثبت عاداتك الجديدة.</p>
         </div>
-        <a href="#" class="resource-link">اقرأ المقال</a>
+        <a href="#" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
       </div>
 
-      <div class="resource-card">
+      <div class="resource-card" data-type="article" data-search="ثابت سقطة انتكاسة">
         <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال</span></div>
         <div class="resource-body">
           <h3>إزاي تفضل ثابت لما تقع؟</h3>
           <p>السقطة مش نهاية الطريق، دي جزء من الرحلة. إزاي تكمل من غير ما تيأس.</p>
         </div>
-        <a href="#" class="resource-link">اقرأ المقال</a>
+        <a href="#" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
       </div>
 
-      <div class="resource-card">
+      <div class="resource-card" data-type="video" data-search="حياة روحية قوية">
         <div class="resource-thumb">
           <img src="/images/video-placeholder.png" alt="بناء حياة روحية قوية">
           <div class="play-overlay"><span>▶</span></div>
@@ -60,18 +84,32 @@
           <h3>بناء حياة روحية قوية</h3>
           <p>علاقتك بربنا هي اللي هتحافظ على التغيير اللي حصل فيك.</p>
         </div>
-        <a href="https://youtube.com" target="_blank" rel="noreferrer" class="resource-link">افتح الفيديو</a>
+        <a href="https://youtube.com" target="_blank" rel="noreferrer" class="resource-link">افتح الفيديو <span class="link-arrow">↗</span></a>
       </div>
 
     </div>
+
+    <p class="resources-empty" hidden>مفيش نتائج مطابقة – جرّب كلمة تانية أو غيّر الفلتر.</p>
+
+    <nav class="section-pager" aria-label="التنقل بين الأقسام">
+      <a href="/section-2.html" class="pager-link pager-prev">
+        <span class="pager-label">القسم السابق</span>
+        <span class="pager-title">القسم الروحي ←</span>
+      </a>
+      <a href="/" class="pager-link pager-next">
+        <span class="pager-label">خلصت الأقسام؟</span>
+        <span class="pager-title">→ رجوع للرئيسية</span>
+      </a>
+    </nav>
   </main>
 
   <footer>
     <div class="footer-inner">
       <p>© 2026 UTURN – كل الحقوق محفوظة</p>
-      <a href="mailto:support@uturnbook.com">support@uturnbook.com</a>
+      <a href="mailto:e3dadymarminabns@gmail.com">e3dadymarminabns@gmail.com</a>
     </div>
   </footer>
 
+  <script src="/section.js"></script>
 </body>
 </html>

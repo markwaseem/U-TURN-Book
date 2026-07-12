@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>القسم النفسي</title>
-<link class="icon" href="/favicon.svg" type="image/svg+xml">
+<title>القسم النفسي | يوتيرن</title>
+<meta name="description" content="مراحل إنك تتعرف على نفسك أكتر – موارد نفسية من كتاب يوتيرن.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
+<body class="section-page section-psychological">
 
   <main class="section-main">
     <div class="section-topbar">
@@ -15,12 +16,35 @@
       <img src="/images/logo.png" alt="UTURN Logo">
     </div>
 
-    <h1 class="section-title">القسم النفسي</h1>
+    <header class="section-hero">
+      <span class="section-badge">الجزء الأول</span>
+      <h1 class="section-title">القسم النفسي</h1>
+      <p class="section-intro">مراحل إنك تتعرف على نفسك أكتر – فهم الإدمان، الرغبة، الذنب، والأفكار اللي بتيجي في دماغك.</p>
+      <div class="section-quote">
+        <p>"أول خطوة في اليو ترن إنك تفهم نفسك من غير ما تكرهها."</p>
+      </div>
+    </header>
+
+    <div class="resources-toolbar">
+      <span class="resources-count">٨ موارد</span>
+      <span class="resources-hint">اضغط على أي مورد للفتح في تبويب جديد</span>
+    </div>
+
+    <div class="section-controls">
+      <div class="resources-search">
+        <input type="search" placeholder="ابحث في الموارد..." aria-label="بحث في الموارد">
+      </div>
+      <div class="filter-tabs" role="tablist" aria-label="تصفية الموارد">
+        <button type="button" class="filter-tab is-active" data-filter="all">الكل</button>
+        <button type="button" class="filter-tab" data-filter="video">فيديو</button>
+        <button type="button" class="filter-tab" data-filter="article">مقال</button>
+        <button type="button" class="filter-tab" data-filter="pdf">PDF</button>
+      </div>
+    </div>
 
     <div class="resources">
 
-      <!-- فيديو 1: 10-Minute Neuroscience -->
-      <div class="resource-card">
+      <div class="resource-card" data-type="video" data-search="Reward Addiction Neuroscience Mesolimbic">
         <div class="resource-thumb">
           <img src="https://img.youtube.com/vi/aWqBkdy0I3M/hqdefault.jpg" alt="Reward and Addiction">
           <div class="play-overlay"><span>▶</span></div>
@@ -30,13 +54,11 @@
           <h3>10-Minute Neuroscience: Reward and Addiction</h3>
           <p>فيديو قصير بيشرح نظام المكافأة والـ Mesolimbic Pathway وعلاقته بالإدمان بطريقة علمية مبسطة.</p>
         </div>
-        <a href="https://www.youtube.com/watch?v=aWqBkdy0I3M" target="_blank" rel="noreferrer" class="resource-link">افتح الفيديو</a>
+        <a href="https://www.youtube.com/watch?v=aWqBkdy0I3M" target="_blank" rel="noreferrer" class="resource-link">افتح الفيديو <span class="link-arrow">↗</span></a>
       </div>
 
-      <!-- فيديو 2: Tender Self-Compassion Break -->
-      <div class="resource-card">
+      <div class="resource-card" data-type="video" data-search="Self-Compassion Kristin Neff">
         <div class="resource-thumb">
-          <!-- تم وضع الـ ID الحقيقي للفيديو الخاص بالدكتورة كريستين نيف (تأمل التعاطف مع الذات) -->
           <img src="https://img.youtube.com/vi/7K6_C7g8g7g/hqdefault.jpg" alt="Self-Compassion Break">
           <div class="play-overlay"><span>▶</span></div>
         </div>
@@ -45,79 +67,86 @@
           <h3>Tender Self-Compassion Break (Dr. Kristin Neff)</h3>
           <p>تدريب عملي وممارسة موجهة لمساعدتك على تقبل نفسك والتعامل مع النقد الذاتي وجلد الذات أثناء رحلة التعافي.</p>
         </div>
-        <a href="https://www.youtube.com/watch?v=7K6_C7g8g7g" target="_blank" rel="noreferrer" class="resource-link">افتح الفيديو</a>
+        <a href="https://www.youtube.com/watch?v=7K6_C7g8g7g" target="_blank" rel="noreferrer" class="resource-link">افتح الفيديو <span class="link-arrow">↗</span></a>
       </div>
 
-      <!-- مقال 1: تمرين اكتشاف الدوافع -->
-      <div class="resource-card">
+      <div class="resource-card" data-type="article" data-search="تمرين اكتشاف الدوافع">
         <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال</span></div>
         <div class="resource-body">
           <h3>تمرين اكتشاف الدوافع</h3>
           <p>ورقة عمل هتساعدك تفهم إيه اللي بيحفزك للوقوع كل مرة.</p>
         </div>
-        <!-- يمكنك تغيير هذا الرابط لاحقاً برابط ورقة العمل الخاصة بك إذا أردت -->
-        <a href="https://www.smartrecovery.org/smart-recovery-toolbox/" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال</a>
+        <a href="https://www.smartrecovery.org/smart-recovery-toolbox/" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
       </div>
 
-      <!-- مقال 2: قصة واحد زيك -->
-      <div class="resource-card">
+      <div class="resource-card" data-type="article" data-search="قصة واحد زيك rebooting">
         <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال</span></div>
         <div class="resource-body">
           <h3>قصة واحد زيك</h3>
           <p>شهادة حقيقية لشاب قدر ياخد يو ترن ويرجع لحياته الطبيعية.</p>
         </div>
-        <a href="https://www.yourbrainonporn.com/rebooting-accounts/" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال</a>
+        <a href="https://www.yourbrainonporn.com/rebooting-accounts/" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
       </div>
 
-      <!-- مقال 3: تقنية Urge Surfing -->
-      <div class="resource-card">
+      <div class="resource-card" data-type="article" data-search="Urge Surfing Alan Marlatt">
         <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال (صفحة 19)</span></div>
         <div class="resource-body">
           <h3>Urge Surfing: History and Clinical Application</h3>
           <p>شرح لنموذج د. آلان مارلات للوقاية من الانتكاسة، وإزاي تركب موجة الرغبة لحد ما تختفي من غير ما تستسلم ليها.</p>
         </div>
-        <a href="https://www.mindfulnessblueprint.com/urge-surfing" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال</a>
+        <a href="https://www.mindfulnessblueprint.com/urge-surfing" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
       </div>
 
-      <!-- أداة 4: Cognitive Defusion -->
-      <div class="resource-card">
+      <div class="resource-card" data-type="pdf" data-search="Defusion ACT Ross Harris">
         <div class="resource-tag"><div class="icon">🛠️</div><span class="label">أداة PDF (صفحة 23)</span></div>
         <div class="resource-body">
           <h3>Defusion: How to Detangle from Thoughts & Feelings</h3>
           <p>استراتيجية مأخوذة من العلاج بالقبول والالتزام (ACT) للدكتور روس هاريس لمساعدتك على فك التشابك مع الأفكار الملحّة.</p>
         </div>
-        <a href="https://www.actmindfully.com.au/wp-content/uploads/2017/12/the_happiness_trap_-reissue_-_free_resources.pdf" target="_blank" rel="noreferrer" class="resource-link">افتح الأداة</a>
+        <a href="https://www.actmindfully.com.au/wp-content/uploads/2017/12/the_happiness_trap_-reissue_-_free_resources.pdf" target="_blank" rel="noreferrer" class="resource-link">افتح الأداة <span class="link-arrow">↗</span></a>
       </div>
 
-      <!-- مقال 5: Guilt vs. Shame -->
-      <div class="resource-card">
+      <div class="resource-card" data-type="article" data-search="Shame Guilt Brené Brown">
         <div class="resource-tag"><div class="icon">📄</div><span class="label">مقال رسمي (صفحة 40)</span></div>
         <div class="resource-body">
           <h3>Shame vs. Guilt - Brené Brown</h3>
           <p>فهم الفرق الجوهري بين الشعور بالذنب (اللي بيدفعك للإصلاح) والشعور بالخزي (اللي بيحسسك إنك فاشل كلك على بعضك ويخليك تنتكس).</p>
         </div>
-        <a href="https://brenebrown.com/articles/2013/01/15/shame-v-guilt/" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال</a>
+        <a href="https://brenebrown.com/articles/2013/01/15/shame-v-guilt/" target="_blank" rel="noreferrer" class="resource-link">اقرأ المقال <span class="link-arrow">↗</span></a>
       </div>
 
-      <!-- مراجعة 6: Thought-Action Fusion -->
-      <div class="resource-card">
+      <div class="resource-card" data-type="article" data-search="Thought-Action Fusion">
         <div class="resource-tag"><div class="icon">🧠</div><span class="label">مراجعة علمية (صفحة 23)</span></div>
         <div class="resource-body">
           <h3>Thought-Action Fusion: Review of the Literature</h3>
           <p>نظرة أكاديمية وفهم الأفكار الاقتحامية، وإزاي تفرق بين فكرة بتيجي في دماغك وبين إنك تعملها فعلاً.</p>
         </div>
-        <a href="https://www.sciencedirect.com/topics/psychology/thought-action-fusion" target="_blank" rel="noreferrer" class="resource-link">اقرأ المراجعة</a>
+        <a href="https://www.sciencedirect.com/topics/psychology/thought-action-fusion" target="_blank" rel="noreferrer" class="resource-link">اقرأ المراجعة <span class="link-arrow">↗</span></a>
       </div>
 
     </div>
+
+    <p class="resources-empty" hidden>مفيش نتائج مطابقة – جرّب كلمة تانية أو غيّر الفلتر.</p>
+
+    <nav class="section-pager" aria-label="التنقل بين الأقسام">
+      <a href="/" class="pager-link pager-prev">
+        <span class="pager-label">الرئيسية</span>
+        <span class="pager-title">← الصفحة الرئيسية</span>
+      </a>
+      <a href="/section-2.html" class="pager-link pager-next">
+        <span class="pager-label">القسم التالي</span>
+        <span class="pager-title">→ القسم الروحي</span>
+      </a>
+    </nav>
   </main>
 
   <footer>
     <div class="footer-inner">
       <p>© 2026 UTURN – كل الحقوق محفوظة</p>
-      <a href="mailto:e3dadymarmina@gmail.com">e3dadymarmina@gmail.com</a>
+      <a href="mailto:e3dadymarminabns@gmail.com">e3dadymarminabns@gmail.com</a>
     </div>
   </footer>
 
+  <script src="/section.js"></script>
 </body>
 </html>
