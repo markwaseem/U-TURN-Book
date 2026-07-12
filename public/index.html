@@ -76,6 +76,17 @@
 
       <a href="#sections-heading" class="btn-secondary">ابدأ بالأقسام ↓</a>
     </section>
+    <script>
+      (function () {
+        var path = document.querySelector('.journey-path');
+        if (!path) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          path.classList.add('is-visible');
+          return;
+        }
+        path.classList.add('journey-path--animate');
+      })();
+    </script>
 
     <section class="nav-cards-section" aria-labelledby="sections-heading">
       <div class="nav-cards-header">
@@ -154,5 +165,20 @@
     </div>
   </footer>
 
+  <noscript>
+    <style>
+      .journey-path .journey-path-title,
+      .journey-path .journey-path-subtitle,
+      .journey-path .journey-step,
+      .journey-path .journey-connector,
+      .journey-path .btn-secondary {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+      }
+    </style>
+  </noscript>
+
+  <script src="/home.js"></script>
 </body>
 </html>

@@ -213,7 +213,7 @@ html {
 @keyframes journey-fade-up {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -227,7 +227,7 @@ html {
     transform: scaleY(0);
   }
   to {
-    opacity: 0.45;
+    opacity: 0.55;
     transform: scaleY(1);
   }
 }
@@ -238,50 +238,76 @@ html {
     transform: scaleX(0);
   }
   to {
-    opacity: 0.45;
+    opacity: 0.55;
     transform: scaleX(1);
   }
 }
 
-.journey-path-title,
-.journey-path-subtitle,
-.journey-step,
-.journey-connector,
-.journey-path .btn-secondary {
-  animation: journey-fade-up 0.5s ease forwards;
+.journey-path--animate:not(.is-visible) .journey-path-title,
+.journey-path--animate:not(.is-visible) .journey-path-subtitle,
+.journey-path--animate:not(.is-visible) .journey-step,
+.journey-path--animate:not(.is-visible) .journey-connector,
+.journey-path--animate:not(.is-visible) .btn-secondary {
   opacity: 0;
 }
 
-.journey-path-title { animation-delay: 0.05s; }
-.journey-path-subtitle { animation-delay: 0.15s; }
+.journey-path--animate:not(.is-visible) .journey-step,
+.journey-path--animate:not(.is-visible) .journey-path-title,
+.journey-path--animate:not(.is-visible) .journey-path-subtitle,
+.journey-path--animate:not(.is-visible) .btn-secondary {
+  transform: translateY(20px);
+}
 
-.journey-steps > .journey-step:nth-child(1) { animation-delay: 0.3s; }
-.journey-steps > .journey-connector:nth-child(2) {
-  animation-name: journey-line-y;
-  animation-duration: 0.35s;
-  animation-delay: 0.48s;
+.journey-path--animate:not(.is-visible) .journey-connector {
+  transform: scaleY(0);
   transform-origin: top center;
 }
-.journey-steps > .journey-step:nth-child(3) { animation-delay: 0.58s; }
-.journey-steps > .journey-connector:nth-child(4) {
+
+.journey-path.is-visible .journey-path-title,
+.journey-path.is-visible .journey-path-subtitle,
+.journey-path.is-visible .journey-step,
+.journey-path.is-visible .journey-connector,
+.journey-path.is-visible .btn-secondary {
+  animation: journey-fade-up 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.journey-path.is-visible .journey-path-title { animation-delay: 0.05s; }
+.journey-path.is-visible .journey-path-subtitle { animation-delay: 0.18s; }
+
+.journey-path.is-visible .journey-steps > .journey-step:nth-child(1) { animation-delay: 0.32s; }
+.journey-path.is-visible .journey-steps > .journey-connector:nth-child(2) {
   animation-name: journey-line-y;
-  animation-duration: 0.35s;
-  animation-delay: 0.76s;
+  animation-duration: 0.45s;
+  animation-delay: 0.52s;
   transform-origin: top center;
 }
-.journey-steps > .journey-step:nth-child(5) { animation-delay: 0.86s; }
+.journey-path.is-visible .journey-steps > .journey-step:nth-child(3) { animation-delay: 0.65s; }
+.journey-path.is-visible .journey-steps > .journey-connector:nth-child(4) {
+  animation-name: journey-line-y;
+  animation-duration: 0.45s;
+  animation-delay: 0.85s;
+  transform-origin: top center;
+}
+.journey-path.is-visible .journey-steps > .journey-step:nth-child(5) { animation-delay: 0.98s; }
 
-.journey-path .btn-secondary { animation-delay: 1.05s; }
+.journey-path.is-visible .btn-secondary { animation-delay: 1.2s; }
 
 @media (prefers-reduced-motion: reduce) {
-  .journey-path-title,
-  .journey-path-subtitle,
-  .journey-step,
-  .journey-connector,
-  .journey-path .btn-secondary {
-    animation: none;
+  .journey-path--animate:not(.is-visible) .journey-path-title,
+  .journey-path--animate:not(.is-visible) .journey-path-subtitle,
+  .journey-path--animate:not(.is-visible) .journey-step,
+  .journey-path--animate:not(.is-visible) .journey-connector,
+  .journey-path--animate:not(.is-visible) .btn-secondary {
     opacity: 1;
     transform: none;
+  }
+
+  .journey-path.is-visible .journey-path-title,
+  .journey-path.is-visible .journey-path-subtitle,
+  .journey-path.is-visible .journey-step,
+  .journey-path.is-visible .journey-connector,
+  .journey-path.is-visible .btn-secondary {
+    animation: none;
   }
 
   .journey-connector {
@@ -1210,6 +1236,11 @@ footer a {
   .journey-steps > .journey-connector:nth-child(2),
   .journey-steps > .journey-connector:nth-child(4) {
     animation-name: journey-line-x;
+    transform-origin: right center;
+  }
+
+  .journey-path--animate:not(.is-visible) .journey-connector {
+    transform: scaleX(0);
     transform-origin: right center;
   }
 
